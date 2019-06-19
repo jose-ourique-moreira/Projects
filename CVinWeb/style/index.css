@@ -1,9 +1,4 @@
 
-body{
-background-color: green;
-
-}
-
 .col-9{
 margin-top: 10%;
 margin-left: 12%;
@@ -13,4 +8,20 @@ max-height: 50%;
 
 #headLiner{
   text-align: center;
+  color: #000;
+  font-style: oblique;
+  font-size: 40px;
+  background-color: goldenrod;
+  border-radius: 45px
+}
+
+#leftKeyboard{
+  color: goldenrod;
+  font-size: 45px;
+}
+
+#rightKeyboard{
+  color: goldenrod;
+  font-size: 45px;
+  float: right;
 }
