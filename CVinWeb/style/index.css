@@ -1,8 +1,21 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .col-9{
 margin-top: 50px; 
 }
 
 #headLiner{
   text-align: center;
+  width: 800px;
+  padding: 20px;
+  height: auto;
+  font-family: sans-serif;
+  font-size: 40px;
+  margin: 200px auto;
+  color: #fff;
+  font-weight: bold;
+  background: #000
 }
