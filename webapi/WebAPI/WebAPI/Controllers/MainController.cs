@@ -10,26 +10,39 @@ namespace WebAPI.Controllers
 {
     public class MainController : ApiController
     {
-        public void OddOrEven(int number)
+
+        int[] unsortedList = { 0, 10, 16, 21, 33, 50, 45, 23, 80 };
+
+         public HttpWebResponse OrderList()
         {
-            if (number % 2 == 0)
+            Array.Sort(unsortedList);
+
+            HttpWebResponse response = new HttpWebResponse();
+
+            response.Content = new StringContent(unsortedList.ToString);
+
+        }
+
+        public HttpWebResponse OddsOrEvens(int number)
+        {
+            HttpWebResponse response = new HttpWebResponse();
+
+            if(number%2 == 0)
             {
-                Console.WriteLine("Even number!");
+                response.Content = new StringContent("The number is Even!");
             }
             else
             {
-                Console.WriteLine("Odd Number!");
+                response.Content = new StringContent("The number is Odd!");
             }
 
+
         }
+
+
 
     
-        public int[] OrderList(int[] list)
-        {
-            Array.Sort(list);
-
-            return list;
-        }
+       
 
 
 
