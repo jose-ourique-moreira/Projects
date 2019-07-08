@@ -7,46 +7,11 @@ namespace WebAPI.Models
 {
     public class Person
     {
-        private String firstName;
-        private String lastName;
-        private int age;
+        public String FirstName { get; set; }
+        public String LastName { get; set; }
+        public int Age { get; set; }
 
-        public string setFirstName(string firstName)
-        {
-            return this.firstName = firstName;
-        }
-
-        public string setLastName(string lastName)
-        {
-            return this.lastName = lastName;
-        }
-
-        public int setAge(int age)
-        {
-            return this.age = age;
-        }
-
-
-        private string getfirstName()
-        {
-            return firstName;
-        }
-
-        private string getLastName()
-        {
-            return lastName;
-        }
-
-        private int getAge()
-        {
-            return age;
-        }
-
-
-        public string PersonInfo() {
-
-            return "O meu nome é " + getfirstName() + " " + getLastName() + "e tenho " + getAge() + " Anos.";
-
-        }
-    }
+   }
+     
+    
 }
