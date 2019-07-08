@@ -9,31 +9,26 @@ namespace WebAPI.Controllers
 {
     public class TestController : ApiController
     {
-        // GET: api/Test
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        private string even = "Number is Even";
+        private string odd = "Number is Odd";
 
-        // GET: api/Test/5
-        public string Get(int id)
+        [HttpGet]
+        public Action OddOrEven(int number)
         {
-            return "value";
-        }
+           
+            if(number % 2 == 0)
+            {
 
-        // POST: api/Test
-        public void Post([FromBody]string value)
-        {
-        }
+                return even;
+            }
+            else
+            {
+                return odd;
+            }
 
-        // PUT: api/Test/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
 
-        // DELETE: api/Test/5
-        public void Delete(int id)
-        {
         }
+        
+        
     }
 }
