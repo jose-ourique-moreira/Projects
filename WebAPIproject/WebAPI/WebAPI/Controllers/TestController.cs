@@ -37,8 +37,11 @@ namespace WebAPI.Controllers
 
         // POST: api/Test
         [HttpPost]
-        public void Post([FromBody] string value)
+        public string Post([FromBody] Person person)
         {
+            person = new Person { FirstName = "José", LastName = "Moreira", Age = 23 };
+
+            return "Ola o meu nome é " + person.FirstName + " " + person.LastName + " e tenho " + person.Age + " Anos.";
         }
 
         // PUT: api/Test/5
